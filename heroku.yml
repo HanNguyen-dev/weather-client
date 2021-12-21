@@ -3,5 +3,3 @@ build:
     web: Dockerfile
   config:
     URL: https://salty-caverns-57357.herokuapp.com/
-run:
-  web: bundle exec puma -C config/puma.rb
