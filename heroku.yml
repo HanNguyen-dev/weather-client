@@ -4,7 +4,4 @@ build:
   config:
     URL: https://salty-caverns-57357.herokuapp.com/
 run:
-  web:
-    command:
-      - docker run
-    image: web
+  web: nginx -g 'daemon off;'
