@@ -7,9 +7,9 @@ class Forecast extends Component {
     render() {
         let forecasts = [];
         if (this.props.forecasts) {
-            this.props.forecasts.map( (day) => {
-                forecasts.push(<Day day={ day.day } high={ day.high } low={ day.low } ></Day>);
-            });
+            forecasts = this.props.forecasts.map(day =>
+                (<Day day={ day.day } high={ day.high } low={ day.low } ></Day>)
+            );
         }
 
         return (
