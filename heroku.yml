@@ -3,5 +3,4 @@ build:
     web: Dockerfile
   config:
     URL: https://salty-caverns-57357.herokuapp.com/
-run:
-  web: nginx -g 'daemon off;'
+
