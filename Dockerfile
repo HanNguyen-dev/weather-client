@@ -16,5 +16,4 @@ FROM nginx:stable-alpine as deploy
 COPY --from=build /reactapp/build /usr/share/nginx/html
 RUN apk --no-cache add gettext
 COPY ./nginx.conf /etc/nginx/nginx.template
-RUN envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf
-# CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
