@@ -11,7 +11,7 @@ class App extends Component {
     }
 
     getForecasts(city) {
-        const URL = process.env.REACT_APP_BASE_URL + '?city=' + encodeURIComponent(city);
+        const URL = process.env.REACT_APP_BASE_URL + 'weather?city=' + encodeURIComponent(city);
 
         axios.get(URL).then(
                 (response) => {
